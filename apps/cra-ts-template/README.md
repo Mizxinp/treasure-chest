@@ -1,0 +1,4 @@
+- create-react-app
+- typescript
+- antd
+- tailwindcss

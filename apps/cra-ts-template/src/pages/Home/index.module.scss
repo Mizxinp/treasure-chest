@@ -1,0 +1,9 @@
+.page {
+  background-color: #555;
+
+  :global {
+    .ant-btn-primary {
+      background-color: #f00;
+    };
+  }
+}
