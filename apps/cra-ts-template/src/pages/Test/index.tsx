@@ -1,7 +1,19 @@
+import { getAllWebPage } from '@/service'
 import { Button } from 'antd'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Test = () => {
+
+  useEffect(() => {
+    getAllWebPage({
+      templateInfo: {},
+      page: { currentPage: 1, showCount: 9999 },
+    })
+      .then((res) => {
+        console.log('res', res);
+      })
+  }, [])
+
   return (
     <div className='flex'>
       
