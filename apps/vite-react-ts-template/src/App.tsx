@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'antd/dist/antd.min.css'
 import Home from "./pages/Home";
 import Test from "./pages/Test";
+import Recoil from "./pages/Recoil";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/recoil" element={<Recoil />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
