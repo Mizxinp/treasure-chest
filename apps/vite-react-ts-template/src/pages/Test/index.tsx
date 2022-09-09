@@ -2,10 +2,10 @@ import { getAllWebPage } from '@/service'
 import { Button } from 'antd'
 import React, { useEffect } from 'react'
 import { recoil } from 'state'
-import { textState } from '../Recoil/store'
+import { countState } from '../Recoil/store'
 
 const Test = () => {
-  const [count ,setCount] = recoil.useRecoilState(textState)
+  const [count ,setCount] = recoil.useRecoilState(countState)
 
   useEffect(() => {
     // getAllWebPage({
