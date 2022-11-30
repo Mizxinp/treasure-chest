@@ -5,6 +5,7 @@ import 'antd/dist/antd.min.css'
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import Recoil from "./pages/Recoil";
+import UtilTest from "./pages/UtilTest";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<Test />} />
             <Route path="/recoil" element={<Recoil />} />
+            <Route path="/util" element={<UtilTest />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

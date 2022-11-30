@@ -1,11 +1,11 @@
-import { getAllWebPage } from '@/service'
-import { Button } from 'antd'
-import React, { useEffect } from 'react'
-import { recoil } from 'state'
-import { countState } from '../Recoil/store'
+import { getAllWebPage } from "@/service";
+import { Button, Input } from "antd";
+import React, { useEffect, useState } from "react";
+import { recoil } from "state";
+import { countState } from "../Recoil/store";
 
 const Test = () => {
-  const [count ,setCount] = recoil.useRecoilState(countState)
+  const [html, setHtml] = useState('');
 
   useEffect(() => {
     // getAllWebPage({
@@ -15,16 +15,25 @@ const Test = () => {
     //   .then((res) => {
     //     console.log('res', res);
     //   })
-  }, [])
+    // alert('wx', wx);
+    // wx.hideTabBar({ success: () => console.log('123'), fail: (e) => console.log('e', e)})
+  }, []);
+
+  const handleChange = (e) => {
+    console.log('eee', e);
+    
+    setHtml(e.target.value)
+  }
 
   return (
-    <div className='flex'>
-      
-      <div>Test</div>
-      <Button type="primary">jjjjj</Button>
-      <Button type="primary" onClick={() => setCount(count + 1)}>test recoil add</Button>
+    <div className="flex">
+      <Input.TextArea onChange={handleChange} />
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+        // style={{ width: "100%", height: 800 }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Test
+export default Test;
