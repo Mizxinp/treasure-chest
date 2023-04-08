@@ -3,5 +3,16 @@
     .ant-btn-primary {
       background-color: #f00;
     };
+
+    .ant-tree .ant-tree-node-content-wrapper {
+      width: 100%;
+      display: block;
+      transition: none;
+      motion: none;
+    }
+
+    .ant-tree-treenode {
+      width: 100%;
+    }
   }
 }
