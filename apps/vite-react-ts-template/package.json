@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "antd": "^4.22.6",
+    "jotai": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "utils": "workspace:*",
-    "state": "workspace:*"
+    "state": "workspace:*",
+    "utils": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

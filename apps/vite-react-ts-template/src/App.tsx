@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Test from "./pages/Test";
 import Recoil from "./pages/Recoil";
 import UtilTest from "./pages/UtilTest";
+import Jotail from "./pages/Jotail";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/recoil" element={<Recoil />} />
             <Route path="/util" element={<UtilTest />} />
+            <Route path="/jotail" element={<Jotail />} />
+            <Route path="/detail" element={<Detail />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
