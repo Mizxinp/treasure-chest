@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Button, Tree } from "antd";
 import styles from "./index.module.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import queryString from 'query-string';
 import TreeDemo from "./TreeDemo";
 import { getViews } from "./util";
 
@@ -17,14 +18,17 @@ const list = [
 ]
 
 const Home = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  const location = useLocation()
+  const query = queryString.parse(location.search)
+  console.log('query', query);
 
   useEffect(() => {
     list.forEach((item) => {
       getViews(item)
     })
   }, [])
-
+  
   return (
     <div className={styles.page}>
       Home
