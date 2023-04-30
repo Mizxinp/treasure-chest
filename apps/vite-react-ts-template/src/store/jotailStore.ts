@@ -1,2 +1,3 @@
 import { atom } from 'jotai';
-export const counterState = atom<number | null>(null);
+export const counterState = atom<number | null>(0);
+console.log('counterState', counterState);

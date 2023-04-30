@@ -6,7 +6,7 @@ import {
   MehOutlined
 } from "@ant-design/icons";
 
-const treeData: DataNode[] = [
+const treeData: any[] = [
   {
     title: "parent 1",
     key: "0-0",
