@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://tezign-assets-test.tezign.com/t29/00b82b634bc91c82dda81d067b9c0a9b.css?Expires=1682956799&OSSAccessKeyId=LTAI5tDubGKMRMroG8MuTLZo&Signature=WLsvIhXYQK3QSX0OSh%2B49rtwJmg%3D&response-content-disposition=inline" /> -->
+    <style>
+
+      html {
+        font-family: sans-serif;
+        line-height: 1.15;
+      }
+
+      body {
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 14px;
+        letter-spacing: 0px;
+        font-weight: normal;
+        line-height: 1.7;
+      }
+
+      thead,
+      tr,
+      td {
+        box-sizing: border-box;
+      }
+      /* ---- const ---- */
+
+      .lightColor {
+        color: #576272;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .font-bold {
+        font-weight: bolder;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      /* -------------------- */
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-1 {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .top-0 {
+        top: 0;
+      }
+
+      .left-0 {
+        left: 0;
+      }
+
+      .p-2 {
+        padding: 2px;
+      }
+
+      .p-28 {
+        padding: 28px;
+      }
+
+      .px-4 {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .px-20 {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .py-8 {
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
+
+      .py-16 {
+        padding-bottom: 16px;
+        padding-top: 16px;
+      }
+
+      .mb-12 {
+        margin-bottom: 12px;
+      }
+
+      .mb-16 {
+        margin-bottom: 16px;
+      }
+
+      .mb-24 {
+        margin-bottom: 24px;
+      }
+
+      .mb-28 {
+        margin-bottom: 28px;
+      }
+
+      .my-28 {
+        margin-top: 28px;
+        margin-bottom: 28px;
+      }
+
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      .letter_spacing {
+        letter-spacing: 0.1px;
+      }
+
+      .border {
+        border-width: 1px;
+      }
+
+      .border-collapse {
+        border-collapse: collapse;
+      }
+
+      .table-auto {
+        table-layout: auto;
+      }
+
+      /* ---- template ---- */
+
+      .template {
+        width: 1150px;
+        background-color: #ffffff;
+        padding: 32px 24px;
+      }
+
+      .template_container {
+        /* position: fixed;
+        top: 2000px; */
+      }
+
+      .empty_div {
+        min-height: 460px;
+      }
+
+      .gray_bg {
+        background-color: #f8f9fa;
+        color: #263035;
+        height: 280px;
+        overflow: hidden;
+      }
+
+      .title {
+        width: 500px;
+        height: 96px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .img_card {
+        width: 460px;
+        height: 320px;
+        border: 1px solid #d3d7db;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .img_self {
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      .template_table {
+        background: #f3f5f7;
+        border: 1px solid #d3d7db;
+      }
+
+      .template_li {
+        display: flex;
+        margin-left: 2px;
+      }
+
+      .template_td {
+        height: 36px;
+        line-height: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 1px solid #d3d7db;
+      }
+
+      .template_td_wrap {
+        white-space: pre-line;
+        height: 75px;
+        max-width: 250px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="template" id="template-page-1">
+      <div class="relative">
+        <div class="absolute top-0 left-0">
+          <img
+            src="https://pubtezign.oss-cn-beijing.aliyuncs.com/ui-logo.jpg"
+            crossorigin="anonymous"
+          />
+        </div>
+
+        <div>
+          <div class="mb-28 text-2xl font-bold text-center title">
+            test-1 test-1 test-1 test-1 
+          </div>
+          <div class="flex justify-between mb-28">
+            <div>
+              <div class="mb-12 flex justify-center items-center img_card">
+                <img
+                  src="https://tezign-assets-test.tezign.com/t29/8cf0d8558702165508bf24ce1b55f156.png?Expires=2314108799&OSSAccessKeyId=LTAI5tDubGKMRMroG8MuTLZo&Signature=K8z2YxKlj2%2FXLddbZZTc0nvbPco%3D&response-content-disposition=attachment%3B%20filename%3D%2268495680_FOP.png%22%3B%20filename%2A%3Dutf-8%27%2768495680_FOP.png&response-content-type=application%2Foctet-stream"
+                  class="p-2 img_self"
+                />
+              </div>
+              <div class="text-center font-bold">FOP (Front of packshot)</div>
+            </div>
+            <div>
+              <div class="mb-12 flex justify-center items-center img_card">
+                <img
+                  src="https://tezign-assets-test.tezign.com/t29/11719026e16701f02375cf7c50a612cd.png?Expires=2272274006399&OSSAccessKeyId=LTAI5tDubGKMRMroG8MuTLZo&Signature=ZZtplzuDDZOPYVoaQCcZbly2JHI%3D&response-content-disposition=inline"
+                  class="p-2 img_self"
+                />
+              </div>
+              <div class="text-center font-bold">BOP (Back of packshot)</div>
+            </div>
+          </div>
+          <div class="mb-28 p-28 gray_bg">
+            <div class="mb-16 text-xl font-bold letter_spacing">
+              Product Information
+            </div>
+            <div class="mb-16">
+              Theres one very important step for achieving smooth skin that
+              shouldnt be overlooked: exfoliation. So gently buff away dry, dull
+              skin while caring for your skin with Dove Pomegranate Seeds & Shea
+              .Theres one very important step for achieving smooth skin that
+              shouldnt be overlooked: exfoliation. So gently buff away dry, dull
+              skin while caring for your skin with Dove Pomegranate Seeds & Shea
+              .Theres one very important step for achieving smooth skin that
+              shouldnt be overlooked: exfoliation. So gently buff away dry, dull
+              skin while caring for your skin with Dove Pomegranate Seeds & Shea
+              .Theres one very important step for achieving smooth skin that
+              shouldnt be overlooked: exfoliation. So gently buff away dry, dull
+              skin while caring for your skin with Dove Pomegranate Seeds & Shea
+              .Theres one very important step for achieving smooth skin that
+              shouldnt be overlooked: exfoliation. So gently buff away dry, dull
+              skin while caring for your skin with Dove Pomegranate Seeds & Shea
+              .
+            </div>
+            <div>Benefits:</div>
+            <ul>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+              <li class="template_li">
+                •<span class="px-4"
+                  >Theres one very important step for achieving smooth skin that
+                  shouldnt be overlooked: exfoliation. So gently buff away dry,
+                  dull skin while caring for your skin with Dove Pomegranate
+                  Se</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex mb-24">
+            <table class="border-collapse table-auto flex-1 template_table">
+              <thead>
+                <tr>
+                  <th
+                    class="border py-16 text-lg text-center letter_spacing"
+                    colspan="4"
+                  >
+                    Logistic Details
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Category
+                  </td>
+                  <td class="template_td template_td_wrap border px-20 py-8">
+                    SKIN CARE HAND & BODY EXCL SUN HAND & BODY EXCL SUN
+                  </td>
+                  <td class="template_td border px-20 py-8 lightColor">Format</td>
+                  <td class="template_td template_td_wrap border px-20 py-8">
+                    SKIN CARE HAND
+                  </td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    UI UAPL Material Code / Product Code
+                  </td>
+                  <td class="template_td border px-20 py-8">68918294</td>
+                  <td class="template_td border px-20 py-8 lightColor">Brand</td>
+                  <td class="template_td border px-20 py-8">VASELINE</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    EAN Code of Pack
+                  </td>
+                  <td class="template_td border px-20 py-8">8720181101243</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    EAN of Carton / Case
+                  </td>
+                  <td class="template_td border px-20 py-8">8720181101298</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Net Weight (GRM)
+                  </td>
+                  <td class="template_td border px-20 py-8">420.00</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Carton / Case Net Weight (KGM)
+                  </td>
+                  <td class="template_td border px-20 py-8">2520.00</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Gross Weight (GRM)
+                  </td>
+                  <td class="template_td border px-20 py-8">2.83</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Carton / Case Gross Weight (KG)
+                  </td>
+                  <td class="template_td border px-20 py-8">2.830</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Length (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">43.00</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Carton / Case Length (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">272.00</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Height (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">196.00</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Carton / Case Height (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">207.00</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Width (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">80.00</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Carton / Case Width (MMT)
+                  </td>
+                  <td class="template_td border px-20 py-8">87.00</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Volume (CMQ)
+                  </td>
+                  <td class="template_td border px-20 py-8">674.24</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Volume (CBM) per 1000 Cases
+                  </td>
+                  <td class="template_td border px-20 py-8">4.90</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Container 20 ft Load
+                  </td>
+                  <td class="template_td border px-20 py-8">2820</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Container 40 ft Load
+                  </td>
+                  <td class="template_td border px-20 py-8">5922</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Packs per Carton / Case
+                  </td>
+                  <td class="template_td border px-20 py-8">6</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Cases per Pallet
+                  </td>
+                  <td class="template_td border px-20 py-8">282</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Packs per Pallet
+                  </td>
+                  <td class="template_td border px-20 py-8">1692</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Made in
+                  </td>
+                  <td class="template_td border px-20 py-8">United Kingdom</td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Pack Size
+                  </td>
+                  <td class="template_td border px-20 py-8">400ML</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Supply County
+                  </td>
+                  <td class="template_td border px-20 py-8">
+                    Direct Sourcing; SG Toll
+                  </td>
+                </tr>
+                <tr>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    Shelf Life (Days)
+                  </td>
+                  <td class="template_td border px-20 py-8">1095</td>
+                  <td class="template_td border px-20 py-8 lightColor">
+                    HS Code
+                  </td>
+                  <td class="template_td border px-20 py-8">33049900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-bold">Terms & Conditions:</div>
+          <div class="mb-8 italic lightColor">
+            We will do our best to ensure that all information, descriptions,
+            photographs and prices of products appearing on this product
+            catalogue are correct at the time when the relevant information was
+            entered in the system. Though we aim to keep this product catalogue as
+            up to date as possible, the information including product
+            descriptions appearing on this product catalogue may not always
+            reflect the product exactly at the moment you place an order. We do
+            not warrant or make any representations regarding the results of
+            the use of this product catalogue in terms of its correctness,
+            accuracy, reliability, or otherwise.
+          </div>
+          <div class="text-right">{downloadTime}</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
