@@ -1,4 +1,4 @@
-import { getAllWebPage } from "@/service";
+import { getAllWebPage, testNest } from "@/service";
 import { Button, Input } from "antd";
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import { recoil } from "state";
@@ -39,7 +39,7 @@ const Test = () => {
   const [list, setList] = useState([{ status: 1 }]);
 
   useEffect(() => {
-    // getAllWebPage({
+    testNest()
     //   templateInfo: {},
     //   page: { currentPage: 1, showCount: 9999 },
     // })
@@ -69,16 +69,16 @@ const Test = () => {
   console.log("state", state, list);
 
   // return <iframe src="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector" style={{ display: 'block', width: '100vw', height: '100vh' }} sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
-  return (
-    <Iframe
-      display="block"
-      position="relative"
-      url="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector"
-      src="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector"
-      width="1000px"
-      height="1000px"
-    />
-  );
+  // return (
+  //   <Iframe
+  //     display="block"
+  //     position="relative"
+  //     url="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector"
+  //     src="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector"
+  //     width="1000px"
+  //     height="1000px"
+  //   />
+  // );
 
   return (
     <div className="flex">
