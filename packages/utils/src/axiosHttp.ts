@@ -6,6 +6,7 @@ const service = new AxiosInstance()
 export async function request(config?: AxiosRequestConfig) {
   try {
     const response: any = await service.request({ ...config });
+    console.log('response', response);
     
     if (response.code === 'xxxxx') {
       window.location.href = 'xxxxx'
@@ -14,7 +15,7 @@ export async function request(config?: AxiosRequestConfig) {
     if (response.code !== '0') {
       return Promise.reject(response);
     }
-    return Promise.resolve(response.data);
+    return Promise.resolve(response.result);
   } catch (error) {
     return Promise.reject(error);
   }
