@@ -9,6 +9,7 @@ import UtilTest from "./pages/UtilTest";
 import Jotai from "./pages/Jotai";
 import JotaiSelf from "./pages/Jotai/JotaiSelf";
 import Detail from "./pages/Detail";
+import Charts from "./pages/charts";
 import { reducer } from "./store/reducer";
 import { Context } from "./store/context";
 
@@ -27,6 +28,7 @@ function App() {
               <Route path="/jotai" element={<Jotai />} />
               <Route path="/detail" element={<Detail />} />
               <Route path="/jotaiself" element={<JotaiSelf />} />
+              <Route path="/charts" element={<Charts />} />
             </Routes>
           </Suspense>
         </BrowserRouter>
