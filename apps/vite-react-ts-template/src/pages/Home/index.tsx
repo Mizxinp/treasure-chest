@@ -5,6 +5,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import queryString from 'query-string';
 import TreeDemo from "./TreeDemo";
 import { getViews } from "./util";
+import { renderToString } from 'react-dom/server';
+import TestNode from '../Test'
 
 const list = [
   {
@@ -28,11 +30,17 @@ const Home = () => {
       getViews(item)
     })
   }, [])
+
+  const handleClick = () => {
+    const html = renderToString(<TestNode />)
+    console.log('html', html);
+  }
   
   return (
-    <div className={styles.page}>
+    <div className={styles.page} id="home">
       Home
       <Button type="primary">button</Button>
+      <Button onClick={handleClick}>生成</Button>
       <div onClick={() => navigate("/test")}>test</div>
       <div className="flex">
         <div className="text-4xl">1</div>

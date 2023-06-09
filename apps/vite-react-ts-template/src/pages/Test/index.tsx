@@ -38,8 +38,8 @@ const Test = () => {
   });
   const [list, setList] = useState([{ status: 1 }]);
 
-  useEffect(() => {
-    testNest()
+  // useEffect(() => {
+    // testNest()
     //   templateInfo: {},
     //   page: { currentPage: 1, showCount: 9999 },
     // })
@@ -48,7 +48,7 @@ const Test = () => {
     //   })
     // alert('wx', wx);
     // wx.hideTabBar({ success: () => console.log('123'), fail: (e) => console.log('e', e)})
-  }, []);
+  // }, []);
 
   const handleChange = (e) => {
     console.log("eee", e);
@@ -57,16 +57,16 @@ const Test = () => {
   };
 
   const handleClick = () => {
-    setTimeout(() => {
-      console.log("time", state);
-    }, 0);
-    state.map.set(1, "1");
-    setUpdate((pre) => pre + 1);
-    list.forEach((item) => {
-      item.status = item.status + 1;
-    });
+    // setTimeout(() => {
+    //   console.log("time", state);
+    // }, 0);
+    // state.map.set(1, "1");
+    // setUpdate((pre) => pre + 1);
+    // list.forEach((item) => {
+    //   item.status = item.status + 1;
+    // });
+    console.log("state", state, list);
   };
-  console.log("state", state, list);
 
   // return <iframe src="​https://service.tezign.com/user-center/10347/t146/aes/sso?aesUserInfo=mR8lXmrqSuH9PYq03oIcuWV5Ssi79C8XDyx%2Ba4Xd9cPZodqPVo0cViabl72MzEgxCKrXgKR0ni3odZHm0zbIHl2dV1b1XNyUXzpJx%2BIzh73NdkoksfWCC4827nK8Gb53&targetUrl=https://ctf.tezign.com/dam_enterprise/material_selector" style={{ display: 'block', width: '100vw', height: '100vh' }} sandbox="allow-same-origin allow-scripts allow-popups allow-forms" />
   // return (
