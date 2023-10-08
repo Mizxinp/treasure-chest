@@ -6,7 +6,7 @@ import { reducer } from "./reducer";
 const Provider: FC<{children: any, store?: any}> = ({ children, store }) => {
   const storeRef = useRef();
   storeRef.current = store || createStore();
-  console.log('jj', storeRef.current);
+  // console.log('jj', storeRef.current);
   
 
   return createElement(
