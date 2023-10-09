@@ -11,6 +11,7 @@ import JotaiSelf from "./pages/Jotai/JotaiSelf";
 import Detail from "./pages/Detail";
 import Charts from "./pages/charts";
 import Filter from "./pages/Filter";
+import Drag from "./pages/Drag";
 import { reducer } from "./store/reducer";
 import { Context } from "./store/context";
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="/jotaiself" element={<JotaiSelf />} />
               <Route path="/charts" element={<Charts />} />
               <Route path="/filter" element={<Filter />} />
+              <Route path="/react_dnd" element={<Drag />} />
             </Routes>
           </Suspense>
         </BrowserRouter>
