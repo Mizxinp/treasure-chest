@@ -1,21 +1,25 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RoutePath from './RoutePath';
+import Layout from '../components/Layout'
 // import RoutePath from './RoutePath';
 // import PageContainer from '../components/PageContainer';
 
 
 const HomePage = lazy(() => import('../pages/home'));
+const ChartPage = lazy(() => import('../pages/charts'));
 
 const AppRouter = () => {
   return (
     <BrowserRouter basename="/">
-      <div>
+      <Layout>
         <Suspense fallback={null}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path={RoutePath.home} element={<HomePage />} />
+            <Route path={RoutePath.charts} element={<ChartPage />} />
           </Routes>
         </Suspense>
-      </div>
+      </Layout>
     </BrowserRouter>
   );
 };
