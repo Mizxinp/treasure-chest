@@ -1,4 +1,4 @@
-import Panel from '@/components/Panel';
+import Panel from '@/components/panel';
 import PieChart from '@/components/charts/PieChart';
 import LineChart from '@/components/charts/LineChart';
 import BarChart from '@/components/charts/BarChart';

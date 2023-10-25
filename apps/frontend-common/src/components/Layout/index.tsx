@@ -15,6 +15,10 @@ const items: GenericItemType[] = [
     key: RoutePath.charts,
     label: "图表",
   },
+  {
+    key: RoutePath.widgets,
+    label: "小组件",
+  },
 ];
 
 function PageContainer(props: { children: React.ReactChild }) {
