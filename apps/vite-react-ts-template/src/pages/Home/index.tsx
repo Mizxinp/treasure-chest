@@ -7,6 +7,12 @@ import TreeDemo from "./TreeDemo";
 import { getViews } from "./util";
 import { renderToString } from 'react-dom/server';
 import TestNode from '../Test'
+import xss from 'xss'
+
+// console.log('xss', xss('<script>alert("xss");</script>1234'));
+console.log('xss', xss('<div>alert("xss");</div>1234'));
+console.log('xs1s', xss('<a onmouseover=alert(document.cookie)>1234'));
+
 
 const list = [
   {
@@ -36,6 +42,8 @@ const Home = () => {
     const html = renderToString(<TestNode />)
     console.log('html', html);
   }
+
+  return <div>ddd</div>
   
   return (
     <div className={styles.page} id="home">

@@ -214,6 +214,7 @@ importers:
       typescript: ^4.6.4
       utils: workspace:*
       vite: ^3.0.7
+      xss: ^1.0.14
     dependencies:
       '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/4.8.0_biqbaboplfbrettd7655fr4n2y
       antd: 4.22.6_biqbaboplfbrettd7655fr4n2y
@@ -230,6 +231,7 @@ importers:
       react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
       state: link:../../packages/state
       utils: link:../../packages/utils
+      xss: 1.0.14
     devDependencies:
       '@types/node': 20.8.4
       '@types/react': 18.0.17
@@ -8308,6 +8310,10 @@ packages:
     resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=}
     engines: {node: '>=4'}
     hasBin: true
+
+  /cssfilter/0.0.10:
+    resolution: {integrity: sha1-xtJnJjKi5cg+AT5oZKQs6N79IK4=}
+    dev: false
 
   /cssnano-preset-default/5.2.14_postcss@8.4.20:
     resolution: {integrity: sha512-t0SFesj/ZV2OTylqQVOrFgEh5uanxbO6ZAdeCrNsUQ6fVuXwYTxJPNAGvGTxHbD68ldIJNec7PyYZDBrfDQ+6A==}
@@ -19629,6 +19635,15 @@ packages:
   /xmlhttprequest-ssl/2.0.0:
     resolution: {integrity: sha1-kTYMhrkU5n9E3OdpGAAnwNphjGc=}
     engines: {node: '>=0.4.0'}
+    dev: false
+
+  /xss/1.0.14:
+    resolution: {integrity: sha512-og7TEJhXvn1a7kzZGQ7ETjdQVS2UfZyTlsEdDOqvQF7GoxNfY+0YLCzBy1kPdsDDx4QuNAonQPddpsn6Xl/7sw==}
+    engines: {node: '>= 0.10.0'}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+      cssfilter: 0.0.10
     dev: false
 
   /xtend/4.0.2:

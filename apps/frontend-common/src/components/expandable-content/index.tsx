@@ -1,9 +1,3 @@
-/**
- * tezign ownership
- * @owner zhangxingping
- * @team M1
- */
-
 import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
 import ExpandButton from './components/ExpandButton';

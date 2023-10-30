@@ -23,7 +23,8 @@
     "react-iframe": "^1.8.5",
     "react-router-dom": "^6.3.0",
     "state": "workspace:*",
-    "utils": "workspace:*"
+    "utils": "workspace:*",
+    "xss": "^1.0.14"
   },
   "devDependencies": {
     "@types/node": "^20.8.4",
