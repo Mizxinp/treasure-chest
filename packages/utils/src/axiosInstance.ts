@@ -2,7 +2,7 @@ import axios from "axios";
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 const defaultConfig = {
-  baseURL: "/api",
+  // baseURL: "/api",
   timeout: 60000,
   withcreadential: true,
 };

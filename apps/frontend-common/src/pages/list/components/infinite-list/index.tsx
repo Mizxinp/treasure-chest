@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useInfiniteScroll } from 'ahooks';
-import { LoadMore } from '@tezign/tezign-ui';
+import LoadMore from '@/components/load-more';
 import { getList } from '../../api';
 import styles from './index.module.scss'
 
