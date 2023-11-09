@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
-import { useInfiniteScroll } from 'ahooks';
 import LoadMore from '@/components/load-more';
 import { getList } from '../../api';
 import styles from './index.module.scss'
+import useInfinite from '@/hooks/useInfinite';
 
 function Card(props: any) {
   const { name } = props;
@@ -13,39 +12,28 @@ function Card(props: any) {
   );
 }
 
-const pageSize = 10;
-
 const InfiniteList = () => {
-  const pageNum = useRef(0)
-  const { data, loading, loadMore, loadingMore, noMore } = useInfiniteScroll((currentData: any) => {
-    console.log('currentData', currentData);
-
-    const params: any = {
-      endPoint: pageNum.current + pageSize,
-      filterMap: {},
-      sort: { name: 'updateTime', value: 'desc' },
-      startPoint: pageNum.current
-    };
-    return getList(params);
-  }, { isNoMore: (res: any) => res && (res?.list?.length >= res?.totalCount) });
-
-  console.log('list', data);
-  console.log('noMore', noMore);
-
-  const nextPage = () => {
-    pageNum.current = pageNum.current + pageSize;
+  const initialParams = {
+    endPoint: 10,
+    filterMap: {},
+    sort: { name: 'updateTime', value: 'desc' },
+    startPoint: 0
   }
 
-  const handleLoadMore = () => {
-    nextPage();
-    loadMore();
-  };
+  const fetchList = (params: any) => {
+    const { pageNum, pageSize, ...nest } = params
+    const startPoint = pageNum * pageSize;
+    const endPoint = startPoint + pageSize;
+    return getList({ ...nest, startPoint, endPoint })
+  }
+
+  const { data, loading, loadMore, loadingMore } = useInfinite({ initialParams, service: fetchList, options: { firstPageFrom: 0 }})
 
 
   return (
     <div>
-      { data?.list?.map(item => <Card key={ item.assetId } { ...item } />) }
-      <LoadMore visible={data && (data.list.length < data.totalCount)} disabled={loading || loadingMore} onEnter={handleLoadMore} />
+      { data?.list?.map(item => <Card key={ `${item.assetId}-${item.name}` } { ...item } />) }
+      <LoadMore visible={data && (data.list.length < data.totalCount)} disabled={loading || loadingMore} onEnter={loadMore} />
     </div>
   );
 };
