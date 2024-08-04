@@ -12,6 +12,7 @@ import Detail from "./pages/Detail";
 import Charts from "./pages/charts";
 import Filter from "./pages/Filter";
 import Drag from "./pages/Drag";
+import XArrows from "./pages/xarrows";
 import { reducer } from "./store/reducer";
 import { Context } from "./store/context";
 
@@ -33,6 +34,7 @@ function App() {
               <Route path="/charts" element={<Charts />} />
               <Route path="/filter" element={<Filter />} />
               <Route path="/react_dnd" element={<Drag />} />
+              <Route path="/xarrows" element={<XArrows />} />
             </Routes>
           </Suspense>
         </BrowserRouter>

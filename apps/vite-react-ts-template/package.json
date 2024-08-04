@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-iframe": "^1.8.5",
     "react-router-dom": "^6.3.0",
+    "react-xarrows": "^2.0.2",
     "state": "workspace:*",
     "utils": "workspace:*",
     "xss": "^1.0.14"
