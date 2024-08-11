@@ -8,6 +8,9 @@ import { HttpStatus } from 'src/config/httpStatus';
 @Injectable()
 export class AppService {
   getHello() {
+    console.log('getHello');
+  }
+  htmlToPdf() {
     const pdfResult = path.join(__dirname, `../src/test-123.pdf`);
     // const pdfTempalte = path.join(__dirname, '../src/index.html');
     // console.log('pdfResult', pdfResult);
