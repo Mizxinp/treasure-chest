@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <h2>请选择一个3D模型文件（.glb, .gltf等）</h2>
+  <input type="file" id="fileInput" accept=".glb,.gltf,.obj,.ply,.fbx,.stl,.dae,.3ds,.skp,.max,.stp" />
+
+  <model-viewer
+    id="modelViewer"
+    alt="3D Model"
+    shadow-intensity="1"
+    camera-controls
+    touch-action="pan-y"
+    src="https://static-common.tezign.com/temp/deer.glb"
+    style="width: 100%; height: 500px;">
+  </model-viewer>
+
+  <script>
+    // 获取文件选择器和 model-viewer 元素
+    const fileInput = document.getElementById('fileInput');
+    const modelViewer = document.getElementById('modelViewer');
+
+    fileInput.addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        // 创建文件的 URL 并设置给 model-viewer 的 src 属性
+        const fileUrl = URL.createObjectURL(file);
+        modelViewer.src = fileUrl;
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ import Drag from "./pages/Drag";
 import XArrows from "./pages/xarrows";
 import { reducer } from "./store/reducer";
 import { Context } from "./store/context";
-
+import ThreeJS from "./pages/ThreeJS";
 function App() {
   const [state, dispatch] = useReducer(reducer, { count: 0 })
   return (
@@ -35,6 +35,8 @@ function App() {
               <Route path="/filter" element={<Filter />} />
               <Route path="/react_dnd" element={<Drag />} />
               <Route path="/xarrows" element={<XArrows />} />
+              <Route path="/threejs" element={<ThreeJS />} />
+
             </Routes>
           </Suspense>
         </BrowserRouter>

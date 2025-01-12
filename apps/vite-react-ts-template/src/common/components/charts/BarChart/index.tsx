@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { Empty } from 'antd';
 import ReactECharts, { EChartsOption } from 'echarts-for-react';
-import { formatNum } from '@/common/utils/bi';
+// import { formatNum } from '@/common/utils/bi';
 
 import styles from './index.module.scss'
 
@@ -65,7 +65,7 @@ export const getPieOptions = (data: IBarItem[], name: string, options: EChartsOp
             position: 'top',
             formatter: (item: any) => {
               const value = typeof item?.data === 'number' ? item?.data : item?.data?.value;
-              return formatNum(value)
+              return value
             }
           }
         }
